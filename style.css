@@ -1,0 +1,265 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+@import url(Arrow1.svg);
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+/*-------------Nav-bar----------*/
+.navbar {
+  background-color: #f989a4;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 24px;
+  height: 140px;
+}
+.navbar .logo {
+  font-size: 24px;
+  margin-left: 70px;
+}
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 50px;
+}
+.navbar .nav-links li {
+  padding: 15px;
+}
+.navbar .nav-links a {
+  color: inherit;
+  text-decoration: none;
+}
+.navbar .nav-links a:hover {
+  text-decoration: underline;
+}
+.navbar .hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+}
+.navbar .hamburger .hamburger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+.navbar #navbar-toggle {
+  display: none;
+}
+@media (max-width: 900px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #f989a4;
+    z-index: 1;
+  }
+  .navbar .nav-links li {
+    padding: 5px 0;
+  }
+  .navbar .nav-links a {
+    text-align: center;
+    display: block;
+  }
+  .navbar #navbar-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+  .navbar .hamburger {
+    display: block;
+  }
+}
+
+/*-------------End--------------*/
+.sec-one {
+  padding: 15px;
+}
+.sec-one .image {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.sec-one .image img {
+  max-width: 100%;
+}
+.sec-one .info-one h1 {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.sec-one .info-one p {
+  font-size: 16px;
+}
+.sec-one .info-one button {
+  margin-top: 40px;
+  border: none;
+  background-color: #f989a4;
+  width: 90px;
+  height: 50px;
+  cursor: pointer;
+}
+.sec-one .info-one button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.sec-one .info-two {
+  margin-top: 200px;
+}
+.sec-one .info-two h1 {
+  text-align: center;
+  font-weight: 600;
+}
+.sec-one .info-two p {
+  margin-top: 40px;
+}
+.sec-one .boxes {
+  margin-top: 45px;
+}
+.sec-one .boxes ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sec-one .boxes ul li {
+  width: calc(33.33% - 10px); /* Adjust the width based on your requirements */
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+.sec-one .boxes ul li a {
+  display: block;
+  text-align: center;
+  text-decoration: none; /* Remove underline from the link */
+  color: #000;
+}
+.sec-one .boxes ul li a img {
+  width: 100%;
+  max-width: 424px; /* Adjust the image size based on your requirements */
+  margin-bottom: 25px;
+}
+.sec-one .boxes ul li a p {
+  margin-top: 10px; /* Adjust the spacing between the image and text */
+  font-size: 32px;
+  margin-bottom: 10px; /* Reduce the margin-bottom here */
+}
+@media screen and (max-width: 700px) {
+  .sec-one .boxes ul {
+    justify-content: center;
+  }
+  .sec-one .boxes ul li {
+    width: calc(50% - 20px); /* Yarı genişlikte iki öğe için -20px margin */
+    margin: 10px; /* Öğeler arasında boşluk bırakmak için margin */
+  }
+  .sec-one .boxes ul li a p {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .sec-one .boxes ul li a p {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.sec-two {
+  padding: 15px;
+  background-color: #efefef;
+}
+.sec-two .services h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.sec-two .statement p {
+  margin-top: 20px;
+}
+.sec-two .list {
+  margin-top: 20px;
+}
+.sec-two .list ul {
+  list-style-type: none;
+}
+.sec-two .list ul li {
+  padding-bottom: 10px;
+}
+.sec-two .list ul li::before {
+  content: url(icons/Arrow.svg);
+  padding-right: 30px;
+}
+
+footer {
+  padding: 15px;
+}
+footer .logo h2 {
+  color: #fe3535;
+}
+footer .img img {
+  margin-bottom: 10px;
+}
+footer .info-foot p {
+  width: 50%;
+}
+footer .contact {
+  margin-top: 20px;
+}
+footer .contact h3 {
+  font-weight: 600;
+}
+footer .contact p .email {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 1100px) {
+  .sec-one .content {
+    display: flex;
+  }
+  .sec-one .content .image {
+    margin: 110px 70px 0 114px;
+    margin-right: 70px;
+    margin-left: 114px;
+    display: inline-block;
+  }
+  .sec-one .content .info-one {
+    margin-top: 110px;
+    width: 50%;
+  }
+  .sec-one .content .info-one h1,
+  .sec-one .content .info-one p {
+    font-size: 24px;
+  }
+  .sec-one .info-two h1,
+  .sec-one .info-two p {
+    font-size: 24px;
+  }
+  .sec-one .boxes .first-boxes ul li a,
+  .sec-one .boxes .second-boxes ul li a {
+    font-size: 32px;
+    color: #000;
+  }
+  .sec-one .boxes .first-boxes ul li a img,
+  .sec-one .boxes .second-boxes ul li a img {
+    width: 100%;
+    max-width: 424px;
+  }
+  footer {
+    display: flex;
+  }
+  footer .contact {
+    margin-right: 150px;
+    display: inline;
+  }
+}/*# sourceMappingURL=style.css.map */
