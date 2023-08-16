@@ -117,6 +117,16 @@
   text-decoration: none;
   color: #ffffff;
 }
+@media screen and (max-width: 1100px) {
+  .sec-one .info-one p {
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .sec-one .info-one p {
+    line-height: 20px;
+  }
+}
 .sec-one .info-two {
   margin-top: 200px;
 }
@@ -126,6 +136,16 @@
 }
 .sec-one .info-two p {
   margin-top: 40px;
+}
+@media screen and (max-width: 1100px) {
+  .sec-one .info-two p {
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .sec-one .info-two p {
+    line-height: 20px;
+  }
 }
 .sec-one .boxes {
   margin-top: 45px;
@@ -137,7 +157,6 @@
 }
 .sec-one .boxes ul li {
   width: calc(33.33% - 10px); /* Adjust the width based on your requirements */
-  margin-bottom: 20px;
   list-style-type: none;
 }
 .sec-one .boxes ul li a {
@@ -149,20 +168,20 @@
 .sec-one .boxes ul li a img {
   width: 100%;
   max-width: 424px; /* Adjust the image size based on your requirements */
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 .sec-one .boxes ul li a p {
-  margin-top: 10px; /* Adjust the spacing between the image and text */
   font-size: 32px;
-  margin-bottom: 10px; /* Reduce the margin-bottom here */
+  margin-bottom: 92px; /* Reduce the margin-bottom here */
+  font-weight: 600;
 }
 @media screen and (max-width: 700px) {
   .sec-one .boxes ul {
     justify-content: center;
   }
   .sec-one .boxes ul li {
-    width: calc(50% - 20px); /* Yarı genişlikte iki öğe için -20px margin */
-    margin: 10px; /* Öğeler arasında boşluk bırakmak için margin */
+    width: calc(50% - 20px);
+    margin: 10px;
   }
   .sec-one .boxes ul li a p {
     font-size: 24px;
@@ -178,11 +197,14 @@
 .sec-two {
   padding: 15px;
   background-color: #efefef;
+  line-height: 40px;
+  font-size: 24px;
 }
 .sec-two .services h1 {
   text-align: center;
   font-weight: 600;
   margin-top: 30px;
+  font-size: 32px;
 }
 .sec-two .statement p {
   margin-top: 20px;
@@ -194,11 +216,44 @@
   list-style-type: none;
 }
 .sec-two .list ul li {
-  padding-bottom: 10px;
+  position: relative;
+  padding-bottom: 20px;
 }
 .sec-two .list ul li::before {
-  content: url(icons/Arrow.svg);
-  padding-right: 30px;
+  content: "";
+  background-image: url(icons/Arrow.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 40px;
+  margin-right: 50px;
+  width: 20px; /* Opsiyonel: İkon boyutu */
+  height: 20px; /* Opsiyonel: İkon boyutu */
+}
+@media (max-width: 768px) {
+  .sec-two .list ul li::before {
+    background-size: 50%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .sec-two .services h1 {
+    font-size: 28px;
+  }
+  .sec-two p,
+  .sec-two li {
+    line-height: 30px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .sec-two .services h1 {
+    font-size: 24px;
+  }
+  .sec-two p,
+  .sec-two li {
+    line-height: 25px;
+    font-size: 16px;
+  }
 }
 
 footer {

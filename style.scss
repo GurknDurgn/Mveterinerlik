@@ -132,6 +132,16 @@ $breakpoint: 900px;
         color: #ffffff;
       }
     }
+    @media screen and (max-width: 1100px) {
+      p {
+        line-height: 30px;
+      }
+    }
+    @media screen and (max-width: 700px) {
+      p {
+        line-height: 20px;
+      }
+    }
   }
   .info-two {
     margin-top: 200px;
@@ -141,6 +151,16 @@ $breakpoint: 900px;
     }
     p {
       margin-top: 40px;
+    }
+    @media screen and (max-width: 1100px) {
+      p {
+        line-height: 30px;
+      }
+    }
+    @media screen and (max-width: 700px) {
+      p {
+        line-height: 20px;
+      }
     }
   }
   .boxes {
@@ -155,7 +175,7 @@ $breakpoint: 900px;
         width: calc(
           33.33% - 10px
         ); /* Adjust the width based on your requirements */
-        margin-bottom: 20px;
+        //margin-bottom: 20px;
         list-style-type: none;
 
         a {
@@ -167,13 +187,14 @@ $breakpoint: 900px;
           img {
             width: 100%;
             max-width: 424px; /* Adjust the image size based on your requirements */
-            margin-bottom: 25px;
+            margin-bottom: 18px;
           }
 
           p {
-            margin-top: 10px; /* Adjust the spacing between the image and text */
+            //margin-top: px; /* Adjust the spacing between the image and text */
             font-size: 32px;
-            margin-bottom: 10px; /* Reduce the margin-bottom here */
+            margin-bottom: 92px; /* Reduce the margin-bottom here */
+            font-weight: 600;
           }
         }
       }
@@ -184,10 +205,8 @@ $breakpoint: 900px;
         justify-content: center;
 
         li {
-          width: calc(
-            50% - 20px
-          ); /* Yarı genişlikte iki öğe için -20px margin */
-          margin: 10px; /* Öğeler arasında boşluk bırakmak için margin */
+          width: calc(50% - 20px);
+          margin: 10px;
           a {
             p {
               font-size: 24px;
@@ -214,11 +233,14 @@ $breakpoint: 900px;
 .sec-two {
   padding: 15px;
   background-color: #efefef;
+  line-height: 40px;
+  font-size: 24px;
   .services {
     h1 {
       text-align: center;
       font-weight: 600;
       margin-top: 30px;
+      font-size: 32px;
     }
   }
   .statement {
@@ -233,13 +255,49 @@ $breakpoint: 900px;
       list-style-type: none;
 
       li {
-        padding-bottom: 10px;
+        position: relative;
+        padding-bottom: 20px;
 
         &::before {
-          content: url(icons/Arrow.svg);
-          padding-right: 30px;
+          content: "";
+          background-image: url(icons/Arrow.svg);
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-position: right center;
+          padding-right: 40px;
+          margin-right: 50px;
+          width: 20px; /* Opsiyonel: İkon boyutu */
+          height: 20px; /* Opsiyonel: İkon boyutu */
+          @media (max-width: 768px) {
+            background-size: 50%;
+          }
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    .services {
+      h1 {
+        font-size: 28px;
+      }
+    }
+    p,
+    li {
+      line-height: 30px;
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .services {
+      h1 {
+        font-size: 24px;
+      }
+    }
+    p,
+    li {
+      line-height: 25px;
+      font-size: 16px;
     }
   }
 }
